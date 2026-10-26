@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farm Workers – 2,000 pixel farmers</title>
+<meta name="description" content="A pixel farmer collection. Two thousand farmers, each with their own cap, tool and harvest in hand.">
+<meta property="og:title" content="Farm Workers">
+<meta property="og:description" content="A pixel farmer collection. Meet your farm worker.">
+<meta property="og:image" content="poster.jpg">
+<link rel="icon" href="488.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Figtree:wght@500;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--grass:#3DB33B;--grass2:#37A336;--deep:#14532D;--lime:#CCFF00;--soil:#3B2616;--sand:#E3BE7A;--wood:#C99A5B;--ink:#0B2E12;--head:'Dela Gothic One','Arial Black',Impact,sans-serif;--px:'Silkscreen','Courier New',monospace}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:500 1.125rem/1.55 Figtree,system-ui,sans-serif;color:var(--ink);background:var(--grass) conic-gradient(var(--grass2) 25%,transparent 0 50%,var(--grass2) 0 75%,transparent 0) 0 0/64px 64px}
+img{image-rendering:pixelated;display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:4px solid #fff;outline-offset:3px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+.px{box-shadow:0 -4px 0 var(--e,var(--ink)),0 4px 0 var(--e,var(--ink)),-4px 0 0 var(--e,var(--ink)),4px 0 0 var(--e,var(--ink)),0 10px 0 var(--d,rgba(0,0,0,.25))}
+.sign{font:700 .8rem/1 var(--px);background:var(--wood);color:var(--soil);padding:.55rem .7rem;--e:var(--soil);--d:transparent;text-decoration:none;display:inline-block}
+nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.5rem 0;flex-wrap:wrap}
+nav div{display:flex;gap:1rem;flex-wrap:wrap}
+nav a:hover{background:var(--lime)}
+.hero{padding-bottom:3.5rem}
+.hero .wrap.grid{display:grid;grid-template-columns:1.25fr .75fr;gap:3rem;align-items:center;padding-block:2rem 4rem}
+h1{font:400 clamp(3.2rem,9.5vw,7.5rem)/.9 var(--head);color:#fff;text-transform:uppercase;letter-spacing:.02em;text-shadow:5px 5px 0 var(--lime),10px 10px 0 var(--deep)}
+.hero p{font-weight:700;font-size:1.3rem;max-width:30rem;margin:2.5rem 0 2rem}
+.btns{display:flex;gap:1.1rem;flex-wrap:wrap}
+.btn{font:700 .95rem/1 var(--px);background:var(--lime);color:var(--ink);padding:1rem 1.3rem;border:0;cursor:pointer;text-decoration:none;--d:var(--deep)}
+.btn.alt{background:#fff}
+.btn:hover{transform:translateY(-4px)}
+.plot{background:var(--sand);padding:1.6rem;--e:var(--soil);text-align:center;position:relative}
+.plot img{width:100%;aspect-ratio:1}
+.plot .sign{position:absolute;top:-1.1rem;left:50%;translate:-50% 0}
+.road{background:var(--lime);border-block:8px solid var(--soil);overflow:hidden}
+.track{display:flex;width:max-content;animation:march 70s linear infinite}
+.road:hover .track{animation-play-state:paused}
+.track img{width:170px;height:170px;animation:bob .7s steps(1) infinite}
+.track img:nth-child(odd){animation-delay:-.35s}
+@keyframes march{to{transform:translateX(-50%)}}
+@keyframes bob{50%{transform:translateY(-6px)}}
+section{padding:5rem 0}
+h2{font:400 clamp(2rem,5vw,3.4rem)/1 var(--head);margin-bottom:1rem}
+.lead{max-width:34rem;margin-bottom:2.2rem;font-weight:700}
+#farmers{background:repeating-linear-gradient(0deg,var(--soil) 0 28px,#2F1E10 28px 32px);color:#fff}
+#farmers .lead{color:#F3E7D3}
+.field{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1.2rem;margin-top:2.5rem}
+.tile{position:relative;padding:0;border:0;background:var(--lime);cursor:pointer;--e:#000;--d:transparent}
+.tile img{width:100%;aspect-ratio:1}
+.tile span{position:absolute;left:0;bottom:0;font:700 .72rem/1 var(--px);background:var(--soil);color:var(--lime);padding:.4rem .5rem}
+.tile:hover{transform:translateY(-4px)}
+.tile.pop{animation:pop .25s steps(3)}
+@keyframes pop{from{transform:scale(.7);opacity:0}}
+#shed{background:var(--sand) repeating-linear-gradient(90deg,transparent 0 118px,rgba(59,38,22,.12) 118px 120px)}
+.shelf{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem 1.6rem}
+.item{text-align:center}
+.item img{background:var(--lime);--e:var(--soil);--d:transparent;width:100%}
+.item .sign{margin-top:1.1rem}
+.note{margin-top:2.5rem;font-weight:700}
+#watch{background:var(--deep);color:#fff}
+.cine{display:grid;grid-template-columns:1.6fr .8fr;gap:2.5rem;align-items:start}
+video{width:100%;display:block;background:#000;--e:var(--lime);--d:transparent}
+.vframe{padding:4px}
+.chap{list-style:none;padding:0;display:grid;gap:1rem}
+.chap button{width:100%;text-align:left;background:transparent;color:#fff;border:0;font:700 1.15rem/1.3 Figtree,sans-serif;padding:1rem 1.1rem;cursor:pointer;display:flex;gap:1rem;align-items:baseline;--e:#2F8A4A;--d:transparent}
+.chap small{font:700 .8rem var(--px);color:var(--lime)}
+.chap button.on{background:var(--lime);color:var(--ink);--e:var(--lime)}
+.chap button.on small{color:var(--ink)}
+footer{background:var(--soil);color:#F3E7D3;padding:3.5rem 0}
+footer .wrap{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;align-items:center}
+footer .logo{font:400 1.8rem var(--head);color:var(--lime)}
+footer div{display:flex;gap:1rem;flex-wrap:wrap}
+@media(max-width:820px){.hero .wrap.grid,.cine{grid-template-columns:1fr}.plot{max-width:20rem}.shelf{grid-template-columns:repeat(2,1fr)}.track img{width:130px;height:130px}}
+@media(prefers-reduced-motion:reduce){.track,.track img,.tile.pop{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <nav>
+      <a class="sign px" href="#top" style="font-size:1rem">Farm Workers</a>
+      <div><a class="sign px" href="#farmers">Farmers</a><a class="sign px" href="#shed">Toolshed</a><a class="sign px" href="#watch">Watch</a></div>
+    </nav>
+  </div>
+  <div class="wrap grid" id="top">
+    <div>
+      <h1>Farm<br>Workers</h1>
+      <p>Two thousand pixel farmers. Each turns up with its own cap, its own tool and something from the harvest in hand.</p>
+      <div class="btns"><a class="btn px" href="#farmers">Meet the farmers</a><a class="btn alt px" href="#watch">Watch the farm</a></div>
+    </div>
+    <div class="plot px"><span class="sign px">Plot</span><img id="hero-farmer" src="532.png" width="500" height="500" alt="A pixel farmer in a straw hat holding corn"></div>
+  </div>
+</header>
+
+<div class="road" aria-hidden="true"><div class="track" id="track"></div></div>
+
+<section id="farmers">
+  <div class="wrap">
+    <h2>The field</h2>
+    <p class="lead">Eighteen of the two thousand are out working today. Shake the field to see who else shows up.</p>
+    <button class="btn px" id="shake" type="button">Shake the field</button>
+    <div class="field" id="field"></div>
+  </div>
+</section>
+
+<section id="shed">
+  <div class="wrap">
+    <h2>What they carry</h2>
+    <p class="lead">Every farmer grabs a tool and something from the harvest before heading out.</p>
+    <div class="shelf">
+      <figure class="item"><img class="px" src="488.png" width="500" height="500" alt="Farmer with a pitchfork" loading="lazy"><figcaption class="sign px">Pitchfork</figcaption></figure>
+      <figure class="item"><img class="px" src="1115.png" width="500" height="500" alt="Farmer with a sickle" loading="lazy"><figcaption class="sign px">Sickle</figcaption></figure>
+      <figure class="item"><img class="px" src="268.png" width="500" height="500" alt="Farmer with a shovel" loading="lazy"><figcaption class="sign px">Shovel</figcaption></figure>
+      <figure class="item"><img class="px" src="1214.png" width="500" height="500" alt="Farmer holding a pumpkin" loading="lazy"><figcaption class="sign px">Pumpkin</figcaption></figure>
+      <figure class="item"><img class="px" src="1862.png" width="500" height="500" alt="Farmer holding corn" loading="lazy"><figcaption class="sign px">Corn</figcaption></figure>
+      <figure class="item"><img class="px" src="1716.png" width="500" height="500" alt="Farmer carrying a harvest tray" loading="lazy"><figcaption class="sign px">Harvest tray</figcaption></figure>
+    </div>
+    <p class="note">Up top it is straw hats, hard hats, camo and ball caps, with or without shades.</p>
+  </div>
+</section>
+
+<section id="watch">
+  <div class="wrap">
+    <h2>Watch the farm</h2>
+    <p class="lead">Thirty seconds on the plots, the pens and the farmhouse. Tap a chapter to jump to it.</p>
+    <div class="cine">
+      <div class="vframe"><video id="vid" class="px" src="farm-workers-promo.mp4" poster="poster.jpg" controls muted loop playsinline preload="metadata"></video></div>
+      <ol class="chap" id="chap">
+        <li><button class="px" data-t="6" type="button"><small>01</small>Meet your farm worker</button></li>
+        <li><button class="px" data-t="12" type="button"><small>02</small>Plant. Harvest. Repeat</button></li>
+        <li><button class="px" data-t="18" type="button"><small>03</small>Explore the farm</button></li>
+        <li><button class="px" data-t="24" type="button"><small>04</small>Grow your farm</button></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo">Farm Workers</span>
+    <div id="links"></div>
+    <span>2,000 pixel farmers</span>
+  </div>
+</footer>
+
+<script>
+// Fill these in to show link buttons in the footer. Leave empty to hide.
+const LINKS={OpenSea:'',X:'',Discord:''};
+// Farmer ids that ship in /img
+const POOL=[488,1214,1115,268,758,1876,1237,971,1282,1190,135,1241,27,1862,1716,961,532,1129,480,393,1469,964,1108,1714,935,1796,1161,1777,1917,1620,963,934,1052,1774,1219,392,382,1667,1060,986,1309,1276,1645,385,195,923,629,294,188,1117,1679,1846,1440,1319,87,1236,820,2000,936,1359];
+const $=s=>document.querySelector(s);
+const pick=(n)=>[...POOL].sort(()=>Math.random()-.5).slice(0,n);
+const img=(id,cls='')=>`<img src="${id}.png" width="500" height="500" alt="Farm Workers farmer #${id}" ${cls}>`;
+// marching road
+const road=POOL.slice(0,16).map(id=>`<img src="${id}.png" width="170" height="170" alt="">`).join('');
+$('#track').innerHTML=road+road;
+// hero farmer
+$('#hero-farmer').src=`${POOL[Math.floor(Math.random()*POOL.length)]}.png`;
+// field
+function field(){
+  $('#field').innerHTML=pick(18).map(id=>`<button class="tile px pop" type="button" aria-label="Farmer #${id}">${img(id,'loading="lazy"')}<span>#${id}</span></button>`).join('');
+}
+field();$('#shake').onclick=field;
+// video
+const v=$('#vid'),btns=[...document.querySelectorAll('#chap button')];
+btns.forEach(b=>b.onclick=()=>{v.currentTime=+b.dataset.t;v.play().catch(()=>{})});
+v.ontimeupdate=()=>{let k=-1;btns.forEach((b,i)=>{if(v.currentTime>=+b.dataset.t-.2)k=i});btns.forEach((b,i)=>b.classList.toggle('on',i===k))};
+new IntersectionObserver(e=>{e[0].isIntersecting?v.play().catch(()=>{}):v.pause()},{threshold:.5}).observe(v);
+// footer links
+$('#links').innerHTML=Object.entries(LINKS).filter(([,u])=>u).map(([n,u])=>`<a class="sign px" href="${u}" target="_blank" rel="noopener">${n}</a>`).join('');
+</script>
+</body>
+</html>
